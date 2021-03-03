@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>Nhà Sách Nhã Nam</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="bootstrap-4.0.0-dist/js/bootstrap.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="page ">
+    <div class="header">
+        <div class="topbar hidden-mobile">
+            <div class="wrapper">
+                <div class="clearfix">
+                    <ul class="topleft">
+                        <li><a>Giới thiệu</a></li>
+                        <li><a>Lịch sử giao dịch</a></li>
+                        <li><a>Kiểm tra đơn hàng</a></li>
+                    </ul>
+                    <ul class="topright">
+                        <li><a>Đăng ký</a></li>
+                        <li><a>Đăng nhập</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper wrap">
+            <h1 class="logo">
+                <a href="/">NhaNam</a>
+            </h1>
+            <div class="cart" id="cart">
+                Giỏ hàng (<span id="cartcount">0</span>)
+            </div>
+            <div class="search">
+                <form action="/tim-kiem" method="GET">
+                    <input type="text" name="q" placeholder="Tìm kiếm sách..." class="text" />
+                    <input type="submit" value="Tìm kiếm" class="submit" />
+                </form>
+            </div>
+            <span class="openmenu-icon"></span>
+            <span class="opensearch-icon"></span>
+        </div>
+    </div>
+    <div id="mainnav">
+        <div class="wrapper">
+            <ul class="menu clearfix">
+                <li>
+                    <a href="/sach-moi-xuat-ban">
+                        Danh mục sách
+                    </a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="/chuyen-muc/1/van-hoc-viet-nam">
+                                Văn học Việt Nam
+                            </a>
+                            <ul class="submenu2">
+                                <li>
+                                    <a href="/chuyen-muc/2/tieu-thuyet">
+                                        Tiểu thuyết
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/chuyen-muc/3/truyen-ngan">
+                                        Truyện ngắn
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/chuyen-muc/4/tho-kich">
+                                        Thơ / Kịch
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/chuyen-muc/5/hoi-ky-phe-binh-tieu-luan">
+                                        Hồi ký / Phê bình / Tiểu luận
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/chuyen-muc/6/tap-but-tan-van">
+                                        Tạp bút / Tản văn
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/chuyen-muc/7/van-hoc-nuoc-ngoai">
+                                Văn học Nước Ngoài
+                            </a>
+                            <ul class="submenu2">
+                                <li>
+                                    <a href="/chuyen-muc/8/duong-dai">
+                                        Đương đại
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/chuyen-muc/9/lang-man">
+                                        Lãng mạn
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/chuyen-muc/10/trinh-tham-kinh-di">
+                                        Trinh thám / Kinh dị
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/chuyen-muc/11/kiem-hiep">
+                                        Kiếm hiệp
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/chuyen-muc/12/kinh-dien">
+                                        Kinh điển
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/chuyen-muc/13/tho-kich">
+                                        Thơ / Kịch
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/chuyen-muc/14/hoi-ky-tieu-luan">
+                                        Hồi ký / Tiểu luận
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/chuyen-muc/15/huyen-ao-gia-tuong">
+                                        Huyền ảo / Giả tưởng
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/chuyen-muc/16/tan-van-tap-but">
+                                        Tản văn / Tạp bút
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/chuyen-muc/17/thieu-nhi">
+                                Thiếu nhi
+                            </a>
+                            <ul class="submenu2">
+                                <li>
+                                    <a href="/chuyen-muc/18/tuoi-teen">
+                                        Tuổi teen
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/chuyen-muc/19/truyen-tranh">
+                                        Truyện tranh
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/chuyen-muc/20/thieu-nhi">
+                                        Thiếu nhi
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/chuyen-muc/21/thoi-su---chinh-tri">
+                                Thời sự - Chính trị
+                            </a>
+                            <ul class="submenu2">
+                                <li>
+                                    <a href="/chuyen-muc/22/hoi-ky-tu-truyen">
+                                        Hồi ký / Tự truyện
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/chuyen-muc/23/the-gioi-hien-dai">
+                                        Thế giới hiện đại
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/chuyen-muc/25/khoa-hoc-tu-nhien---nhan-van">
+                                Khoa học tự nhiên - Nhân văn
+                            </a>
+                            <ul class="submenu2">
+                                <li>
+                                    <a href="/chuyen-muc/26/lich-su">
+                                        Lịch sử
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/chuyen-muc/27/triet-hoc">
+                                        Triết học
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/chuyen-muc/28/tam-ly-hoc">
+                                        Tâm lý học
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/chuyen-muc/29/kinh-te">
+                                        Kinh tế
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/chuyen-muc/30/vu-tru">
+                                        Vũ trụ
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/chuyen-muc/31/sinh-hoc">
+                                        Sinh học
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/chuyen-muc/32/tham-khao">
+                                Tham khảo
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/chuyen-muc/43/giam-gia-dac-biet">
+                                Giảm giá; đặc biệt
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/chuyen-muc/44/sach-tai-ban">
+                                Sách tái bản
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/chuyen-muc/45/dat-truoc-sach">
+                                Đặt trước <sá></sá>ch
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- <li>
+                    <a href="/combo-sach">Combo Sách</a>
+                </li> -->
+                <li>
+                    <a href="/chuyen-muc/42/sach-ban-chay">Sách bán chạy</a>
+                </li>
+                <li>
+                    <a href="/tin-tuc/14/chuong-trinh-khuyen-mai">Chương trình khuyến mãi</a>
+                </li>
+                <li>
+                    <a href="/chuyen-muc/43/giam-gia-dac-biet">Giảm giá đặc biệt</a>
+                </li>
+                <li class="show-mobile"><a href="/tin-tuc/5/gioi-thieu">Giới thiệu</a></li>
+
+                <li class="show-mobile"><a href="/lich-su-giao-dich">Lịch sử giao dịch</a></li>
+
+                <li class="show-mobile"><a href="/kiem-tra-don-hang">Kiểm tra đơn hàng</a></li>
+                <li class="show-mobile">
+                    <a href="/dang-ky">Đăng ký</a>
+                </li>
+                <li class="show-mobile">
+                    <a href="/dang-nhap">Đăng nhập</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="http://static.nhanam.com.vn/thumb/0x0/crop/Features/Images/2018/9/13/3XSUDF44.jpg" alt="Los Angeles" style="width:100%;">
+                </div>
+
+                <div class="item">
+                    <img src="http://static.nhanam.com.vn/thumb/0x0/crop/Features/Images/2018/9/13/OJ4M48Q3.jpg" alt="Chicago" style="width:100%;">
+                </div>
+
+                <div class="item">
+                    <img src="http://static.nhanam.com.vn/thumb/0x0/crop/Features/Images/2019/4/25/6HHNAJ7E.jpg" alt="New york" style="width:100%;">
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <h1 class="pagetitle">
+            <a href="/sach-moi-xuat-ban">
+                Sách mới - Tái bản
+
+            </a>
+
+        </h1>
+        <ul class="listbook clearfix">
+            <li class="book  bookimage0">
+                <div class="wrap">
+                    <a href="/sach/24452/meo-chien-binh--bao-noi" class="image" title="Mèo chiến binh- Bão nổi">
+                        <img src="http://static.nhanam.com.vn/thumb/0x230/crop/Books/Images/2021/1/29/DEADP2JD.jpg" alt="Mèo chiến binh- Bão nổi">
+
+
+                    </a>
+                    <!-- <p class="price">
+                        108.800đ
+
+                            <span class="old">136.000đ</span>
+                    </p> -->
+                    <div class="popup">
+                        <h1 class="name">
+                            <a href="/sach/24452/meo-chien-binh--bao-noi" title="Mèo chiến binh- Bão nổi">
+                                Mèo chiến binh- Bão nổi
+                            </a>
+                        </h1>
+                        <div class="description"><ul><li>Số trang: 412</li><li>Kích thước: 14 x 20.5cm</li><li>Ngày phát hành: 22-02-2021</li></ul></div>
+                        <p class="price">
+                            108.800đ
+
+                            <span class="old">136.000đ</span>
+                        </p>
+                        <a href="javascript:;" class="addtocart" data-id="24452" data-state="0">Thêm vào giỏ hàng</a>
+                        <a href="javascript:;" class="buynow" data-id="24452" data-state="0">Mua ngay</a>
+
+                    </div>
+                </div>
+            </li>
+            <li class="book  bookimage0">
+                <div class="wrap">
+                    <a href="/sach/25419/mot-minh-tim-mot-nua" class="image" title="Một mình tìm một nửa ">
+                        <img src="http://static.nhanam.com.vn/thumb/0x230/crop/Books/Images/2021/2/19/7KOW2DJZ.jpg" alt="Một mình tìm một nửa ">
+
+
+                    </a>
+                    <!-- <p class="price">
+                        120.000đ
+
+                            <span class="old">150.000đ</span>
+                    </p> -->
+                    <div class="popup">
+                        <h1 class="name">
+                            <a href="/sach/25419/mot-minh-tim-mot-nua" title="Một mình tìm một nửa ">
+                                Một mình tìm một nửa
+                            </a>
+                        </h1>
+                        <div class="description"><ul><li>Số trang: 304</li><li>Kích thước: 14x20.5 cm</li><li>Ngày phát hành: 19-02-2021</li></ul></div>
+                        <p class="price">
+                            120.000đ
+
+                            <span class="old">150.000đ</span>
+                        </p>
+                        <a href="javascript:;" class="addtocart" data-id="25419" data-state="0">Thêm vào giỏ hàng</a>
+                        <a href="javascript:;" class="buynow" data-id="25419" data-state="0">Mua ngay</a>
+
+                    </div>
+                </div>
+            </li>
+            <li class="book  bookimage0">
+                <div class="wrap">
+                    <a href="/sach/24438/khieu-vu-ben-bo-vuc" class="image" title="Khiêu vũ bên bờ vực">
+                        <img src="http://static.nhanam.com.vn/thumb/0x230/crop/Books/Images/2021/1/26/KTZ9IZJV.jpg" alt="Khiêu vũ bên bờ vực">
+
+
+                    </a>
+                    <!-- <p class="price">
+                        105.600đ
+
+                            <span class="old">132.000đ</span>
+                    </p> -->
+                    <div class="popup">
+                        <h1 class="name">
+                            <a href="/sach/24438/khieu-vu-ben-bo-vuc" title="Khiêu vũ bên bờ vực">
+                                Khiêu vũ bên bờ vực
+                            </a>
+                        </h1>
+                        <div class="description"><ul><li>Số trang: 340</li><li>Kích thước: 14x20.5 cm</li><li>Ngày phát hành: 19-02-2021</li></ul></div>
+                        <p class="price">
+                            105.600đ
+
+                            <span class="old">132.000đ</span>
+                        </p>
+                        <a href="javascript:;" class="addtocart" data-id="24438" data-state="0">Thêm vào giỏ hàng</a>
+                        <a href="javascript:;" class="buynow" data-id="24438" data-state="0">Mua ngay</a>
+
+                    </div>
+                </div>
+            </li>
+            <li class="book  bookimage0">
+                <div class="wrap">
+                    <a href="/sach/24467/nghe-thuat-day-con-tu-kinh-talmud" class="image" title="Nghệ thuật dạy con từ kinh Talmud">
+                        <img src="http://static.nhanam.com.vn/thumb/0x230/crop/Books/Images/2021/2/5/76KRQADN.jpg" alt="Nghệ thuật dạy con từ kinh Talmud">
+
+
+                    </a>
+                    <!-- <p class="price">
+                        108.000đ
+
+                            <span class="old">135.000đ</span>
+                    </p> -->
+                    <div class="popup">
+                        <h1 class="name">
+                            <a href="/sach/24467/nghe-thuat-day-con-tu-kinh-talmud" title="Nghệ thuật dạy con từ kinh Talmud">
+                                Nghệ thuật dạy con từ kinh Talmud
+                            </a>
+                        </h1>
+                        <div class="description"><ul><li>Số trang: 132</li><li>Kích thước: 17x24 cm</li><li>Ngày phát hành: 17-02-2021</li></ul></div>
+                        <p class="price">
+                            108.000đ
+
+                            <span class="old">135.000đ</span>
+                        </p>
+                        <a href="javascript:;" class="addtocart" data-id="24467" data-state="0">Thêm vào giỏ hàng</a>
+                        <a href="javascript:;" class="buynow" data-id="24467" data-state="0">Mua ngay</a>
+
+                    </div>
+                </div>
+            </li>
+            <li class="book  bookimage0">
+                <div class="wrap">
+                    <a href="/sach/24453/co-thanh-xuan-nao-khong-dau-don-co-tuoi-tre-n" class="image" title="Có thanh xuân nào không đau đớn, có tuổi trẻ nào không bão giông">
+                        <img src="http://static.nhanam.com.vn/thumb/0x230/crop/Books/Images/2021/1/29/6V1AE9N3.jpg" alt="Có thanh xuân nào không đau đớn, có tuổi trẻ nào không bão giông">
+
+
+                    </a>
+                    <!-- <p class="price">
+                        103.200đ
+
+                            <span class="old">129.000đ</span>
+                    </p> -->
+                    <div class="popup">
+                        <h1 class="name">
+                            <a href="/sach/24453/co-thanh-xuan-nao-khong-dau-don-co-tuoi-tre-n" title="Có thanh xuân nào không đau đớn, có tuổi trẻ nào không bão giông">
+                                Có thanh xuân nào không đau đớn, có tuổi trẻ nào không bão giông
+                            </a>
+                        </h1>
+                        <div class="description"><ul><li>Số trang: 250</li><li>Kích thước: 14x20.5cm</li><li>Ngày phát hành: 17-02-2021</li></ul></div>
+                        <p class="price">
+                            103.200đ
+
+                            <span class="old">129.000đ</span>
+                        </p>
+                        <a href="javascript:;" class="addtocart" data-id="24453" data-state="0">Thêm vào giỏ hàng</a>
+                        <a href="javascript:;" class="buynow" data-id="24453" data-state="0">Mua ngay</a>
+
+                    </div>
+                </div>
+            </li>
+            <li class="book  bookimage0">
+                <div class="wrap">
+                    <a href="/sach/24454/tan-ngay-de-lai" class="image" title="Tàn ngày để lại">
+                        <img src="http://static.nhanam.com.vn/thumb/0x230/crop/Books/Images/2021/1/29/7IMKGWR7.jpg" alt="Tàn ngày để lại">
+
+
+                    </a>
+                    <!-- <p class="price">
+                        135.200đ
+
+                            <span class="old">169.000đ</span>
+                    </p> -->
+                    <div class="popup">
+                        <h1 class="name">
+                            <a href="/sach/24454/tan-ngay-de-lai" title="Tàn ngày để lại">
+                                Tàn ngày để lại
+                            </a>
+                        </h1>
+                        <div class="description"><ul><li>Số trang: 286</li><li>Kích thước: 14x20.5cm</li><li>Ngày phát hành: 17-02-2021</li></ul></div>
+                        <p class="price">
+                            135.200đ
+
+                            <span class="old">169.000đ</span>
+                        </p>
+                        <a href="javascript:;" class="addtocart" data-id="24454" data-state="0">Thêm vào giỏ hàng</a>
+                        <a href="javascript:;" class="buynow" data-id="24454" data-state="0">Mua ngay</a>
+
+                    </div>
+                </div>
+            </li>
+            <li class="book  bookimage0">
+                <div class="wrap">
+                    <a href="/sach/24457/em-lam-quen-voi-khoa-hoc--gau-con-muon-xuong" class="image" title="Em làm quen với khoa học- Gấu con muốn xuống núi">
+                        <img src="http://static.nhanam.com.vn/thumb/0x230/crop/Books/Images/2021/2/5/BK6H7R2P.jpg" alt="Em làm quen với khoa học- Gấu con muốn xuống núi">
+
+
+                    </a>
+                    <!-- <p class="price">
+                        22.400đ
+
+                            <span class="old">28.000đ</span>
+                    </p> -->
+                    <div class="popup">
+                        <h1 class="name">
+                            <a href="/sach/24457/em-lam-quen-voi-khoa-hoc--gau-con-muon-xuong" title="Em làm quen với khoa học- Gấu con muốn xuống núi">
+                                Em làm quen với khoa học- Gấu con muốn xuống núi
+                            </a>
+                        </h1>
+                        <div class="description"><ul><li>Số trang: 20</li><li>Kích thước: 20.5x20.5 cm</li><li>Ngày phát hành: 17-02-2021</li></ul></div>
+                        <p class="price">
+                            22.400đ
+
+                            <span class="old">28.000đ</span>
+                        </p>
+                        <a href="javascript:;" class="addtocart" data-id="24457" data-state="0">Thêm vào giỏ hàng</a>
+                        <a href="javascript:;" class="buynow" data-id="24457" data-state="0">Mua ngay</a>
+
+                    </div>
+                </div>
+            </li>
+            <li class="book  bookimage0">
+                <div class="wrap">
+                    <a href="/sach/24458/em-lam-quen-voi-khoa-hoc--nguoi-tuyet-bien-ma" class="image" title="Em làm quen với khoa học- Người tuyết biến mất rồi ">
+                        <img src="http://static.nhanam.com.vn/thumb/0x230/crop/Books/Images/2021/2/5/WFZQ5ZW3.jpg" alt="Em làm quen với khoa học- Người tuyết biến mất rồi ">
+
+
+                    </a>
+                    <!-- <p class="price">
+                        22.400đ
+
+                            <span class="old">28.000đ</span>
+                    </p> -->
+                    <div class="popup">
+                        <h1 class="name">
+                            <a href="/sach/24458/em-lam-quen-voi-khoa-hoc--nguoi-tuyet-bien-ma" title="Em làm quen với khoa học- Người tuyết biến mất rồi ">
+                                Em làm quen với khoa học- Người tuyết biến mất rồi
+                            </a>
+                        </h1>
+                        <div class="description"><ul><li>Số trang: 20</li><li>Kích thước: 20.5x20.5 cm</li><li>Ngày phát hành: 17-02-2021</li></ul></div>
+                        <p class="price">
+                            22.400đ
+
+                            <span class="old">28.000đ</span>
+                        </p>
+                        <a href="javascript:;" class="addtocart" data-id="24458" data-state="0">Thêm vào giỏ hàng</a>
+                        <a href="javascript:;" class="buynow" data-id="24458" data-state="0">Mua ngay</a>
+
+                    </div>
+                </div>
+            </li>
+            <li class="book  bookimage0">
+                <div class="wrap">
+                    <a href="/sach/24459/em-lam-quen-voi-khoa-hoc--heo-ut-ot-may-man" class="image" title="Em làm quen với khoa học- Heo Ụt Ịt may mắn">
+                        <img src="http://static.nhanam.com.vn/thumb/0x230/crop/Books/Images/2021/2/5/2NO716TF.jpg" alt="Em làm quen với khoa học- Heo Ụt Ịt may mắn">
+
+
+                    </a>
+                    <!-- <p class="price">
+                        22.400đ
+
+                            <span class="old">28.000đ</span>
+                    </p> -->
+                    <div class="popup">
+                        <h1 class="name">
+                            <a href="/sach/24459/em-lam-quen-voi-khoa-hoc--heo-ut-ot-may-man" title="Em làm quen với khoa học- Heo Ụt Ịt may mắn">
+                                Em làm quen với khoa học- Heo Ụt Ịt may mắn
+                            </a>
+                        </h1>
+                        <div class="description"><ul><li>Số trang: 20</li><li>Kích thước: 20.5x20.5 cm</li><li>Ngày phát hành: 17-02-2021</li></ul></div>
+                        <p class="price">
+                            22.400đ
+
+                            <span class="old">28.000đ</span>
+                        </p>
+                        <a href="javascript:;" class="addtocart" data-id="24459" data-state="0">Thêm vào giỏ hàng</a>
+                        <a href="javascript:;" class="buynow" data-id="24459" data-state="0">Mua ngay</a>
+
+                    </div>
+                </div>
+            </li>
+            <li class="book  bookimage0">
+                <div class="wrap">
+                    <a href="/sach/24460/em-lam-quen-voi-khoa-hoc--qua-tao-dau-mat-roi" class="image" title="Em làm quen với khoa học- Quả táo đâu mất rồi">
+                        <img src="http://static.nhanam.com.vn/thumb/0x230/crop/Books/Images/2021/2/5/SQAVTRYB.jpg" alt="Em làm quen với khoa học- Quả táo đâu mất rồi">
+
+
+                    </a>
+                    <!-- <p class="price">
+                        22.400đ
+
+                            <span class="old">28.000đ</span>
+                    </p> -->
+                    <div class="popup">
+                        <h1 class="name">
+                            <a href="/sach/24460/em-lam-quen-voi-khoa-hoc--qua-tao-dau-mat-roi" title="Em làm quen với khoa học- Quả táo đâu mất rồi">
+                                Em làm quen với khoa học- Quả táo đâu mất rồi
+                            </a>
+                        </h1>
+                        <div class="description"><ul><li>Số trang: 20</li><li>Kích thước: 20.5x20.5 cm</li><li>Ngày phát hành: 17-02-2021</li></ul></div>
+                        <p class="price">
+                            22.400đ
+
+                            <span class="old">28.000đ</span>
+                        </p>
+                        <a href="javascript:;" class="addtocart" data-id="24460" data-state="0">Thêm vào giỏ hàng</a>
+                        <a href="javascript:;" class="buynow" data-id="24460" data-state="0">Mua ngay</a>
+
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+    <div class="footer">
+        <div class="wrapper">
+            <div class="footermenu clearfix">
+                <div class="col">
+                    <ul>
+                        <li><a href="/tin-tuc/5/gioi-thieu">Giới thiệu</a></li>
+                        <li><a href="/tin-tuc/9/chinh-sach-bao-mat">Chính sách bảo mật</a></li>
+                        <li><a href="/tin-tuc/10/chinh-sach-van-chuyen">Chính sách vận chuyển</a></li>
+                        <li><a href="/tin-tuc/12/hinh-thuc-thanh-toan"> Hình thức thanh toán</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <li><a href="/tin-tuc/11/quy-dinh-doi-tra-huy-don-hang">Quy định đổi, trả và huỷ đơn hàng</a></li>
+                        <li><a href="/tin-tuc/7/huong-dan-dat-hang">Hướng dẫn đặt hàng</a></li>
+                        <li><a href="/tin-tuc/8/lien-he">Liên hệ</a></li>
+                        <li><a href="/tin-tuc/19/thong-bao">Thông báo</a></li>
+                    </ul>
+                </div>
+                <div class="socialbtn">
+                    <a class="facebook" href="https://www.facebook.com/nhanampublishing">
+                        Facebook
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="wrapper">
+                © 2014 - Bản quyền của Công Ty Cổ Phần Văn Hoá và Truyền Thông Nhã Nam - <a href="/" style="color:#fff">nhanam.com.vn</a> <br>
+                Địa chỉ: 59 Đỗ Quang, phường Trung Hoà, quận Cầu Giấy, Hà Nội
+                <br>
+                Giấy ĐKKD số 0101603420 do Sở KH&amp;ĐT TP Hà Nội cấp ngày 21 tháng 1 năm 2005 sửa đổi lần 5 ngày 20/3/2013
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

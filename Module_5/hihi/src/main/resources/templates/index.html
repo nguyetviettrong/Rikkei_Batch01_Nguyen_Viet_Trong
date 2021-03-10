@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Demo Spring</title>
+</head>
+<body>
+
+</form>
+<br/><br/>
+<table border="1" cellpadding="10" align="center">
+    <thead>
+    <tr>
+        <th>MaKH</th>
+        <th>TenKhachHang</th>
+        <th>Email</th>
+        <th>SoDienThoai</th>
+        <th>NgaySinh</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="customer : ${listkhachhang}">
+        <td th:text="${customer.MaKhachHang}">MaKH</td>
+        <td th:text="${customer.TenKhachHang}">TenKhachHang</td>
+        <td th:text="${customer.Email}">Email</td>
+        <td th:text="${customer.SoDienThoai}">SoDienThoai</td>
+        <td th:text="${customer.NgaySinh}">NgaySinh</td>
+    </tr>
+    </tbody>
+</table>
+<div align="center">
+    <a th:href="@{'/trangchu'}">Về trang chủ</a> </div>
+<br/>
+
+</body>
+</html>
